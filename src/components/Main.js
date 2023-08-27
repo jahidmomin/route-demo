@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About, { Child1, Child2 } from "./About";
 import Home from "./Home";
 import LoginForm from "./LoginForm";
 import Nav from "./Nav";
 import Pricing from "./Pricing";
+import RegisterForm from "./RegisterForm";
 import UserDashBoard from "./UserDashBoard";
 export default function Main() {
   return (
@@ -20,7 +21,7 @@ export default function Main() {
           </Route>
           <Route path="/pricing" element={<Pricing />}></Route>
           <Route path="/login" element={<LoginForm />}></Route>
-          <Route path="/register" element={<LoginForm />}></Route>
+          <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/dashboard" element={<UserDashBoard />}></Route>
         </Routes>
       </Router>

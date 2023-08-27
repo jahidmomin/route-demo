@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useCookies from "react-cookie";
 export default function Nav() {
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  // const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-primary">
@@ -23,7 +22,7 @@ export default function Nav() {
                   Features
                 </Link>
               </li> */}
-              {cookies.user=="" && (
+              {true && (
                 <li className="nav-item">
                   <Link className="nav-link" to={"/login"}>
                     Login

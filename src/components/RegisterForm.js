@@ -4,13 +4,14 @@ import * as yup from "yup";
 import {useNavigate} from 'react-router-dom'
 
 
-export default function LoginForm() {
+
+export default function RegisterForm() {
   const navigate=useNavigate();
   // const [cookies, setCookie, removeCookie] = useCookies(['user']);
   return (
     <div className="col-4 mt-4">
       <div className="card">
-        <div className="card-header">Sign In</div>
+        <div className="card-header">Sign Up</div>
         <div className="card-body">
           <h5 className="card-title">Special title treatment</h5>
           <div className="card-text">
@@ -27,7 +28,7 @@ export default function LoginForm() {
               onSubmit={(values) => {
                 alert(JSON.stringify(values));
                 // setCookie("user",values.email);
-                navigate("/dashboard");
+                navigate("/login");
               }}
             >
               {(props) => (
@@ -72,7 +73,7 @@ export default function LoginForm() {
                         </div>
                       </div>
                       <button className="btn btn-primary">
-                        Sign in
+                        Register
                       </button>
                     </div>
                 </Form>
